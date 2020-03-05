@@ -2,7 +2,8 @@ require_relative 'todoitem'
 class ToDoList
   def initialize
     @items = [TodoItem.new("Buy milk", "Domestic"),
-              TodoItem.new("Tax returns", "Finance")
+              TodoItem.new("Tax returns", "Finance"),
+              TodoItem.new("Buy coffee", "Domestic")
     ]
   end
 

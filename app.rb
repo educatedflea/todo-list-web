@@ -33,7 +33,7 @@ class ToDoListApp < Sinatra::Base
   end
 
   get '/bycategory' do
-    category = params[:category]
+    category = params[:category] || "Finance"
     @items = $todolist.by_category(category)
     response = erb :items_by_category
     response

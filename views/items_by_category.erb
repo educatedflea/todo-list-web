@@ -1,4 +1,13 @@
 <h1>Items in the todo list for category: <%= @items.first.category %></h1>
+
+<form action="/bycategory" method="GET">
+<select id="category" name="category">
+  <option value="Finance">Finance</option>
+  <option value="Domestic">Domestic</option>
+</select>
+<input type="submit" value="submit">
+</form>
+
 <table>
   <th>
     Name
@@ -8,7 +17,6 @@
       <td>
         <%= @item.name %>
       </td>
-
     </tr>
   <% end %>
 </table>
